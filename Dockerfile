@@ -23,3 +23,9 @@ RUN bundle install
 COPY . /rails/
 
 RUN bin/rails assets:precompile
+
+ENTRYPOINT ["/rails/bin/docker-entrypoint.sh"]
+
+EXPOSE 3000
+
+CMD ["bin/rails", "server", "-b", "0.0.0.0"]
