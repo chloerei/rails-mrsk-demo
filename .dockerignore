@@ -37,6 +37,7 @@
 /public/assets
 
 # Ignore env local config.
+/.env
 /.env.*.local
 /.env.local
 
