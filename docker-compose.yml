@@ -5,6 +5,7 @@ services:
     build:
       context: .
       target: base
+    entrypoint: ["/rails/bin/docker-entrypoint.sh"]
     command: bin/rails server -b 0.0.0.0
     volumes:
       - .:/rails
