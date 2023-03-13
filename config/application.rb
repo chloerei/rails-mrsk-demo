@@ -25,6 +25,8 @@ module App
       pool_size: ENV.fetch("RAILS_MAX_THREADS") { 5 }
     }
 
+    config.active_job.queue_adapter = :sidekiq
+
     config.generators do |generate|
       generate.helper false
     end
